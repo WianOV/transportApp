@@ -20,7 +20,8 @@ const MainStack = () => {
         headerShown: true,
       }}>
       {/* screens here */}
-      <Stack.Screen name="Drawer" component={CustmeDrawer} />
+      <Stack.Screen name="NavApp" component={CustmeDrawer} />
+      {/* <Stack.Screen name="Home" component={Home} /> */}
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="Settings" component={Settings} />
     </Stack.Navigator>
