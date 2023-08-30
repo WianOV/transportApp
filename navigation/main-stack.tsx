@@ -10,7 +10,8 @@ import {MainStackParamList} from '../types/navigation';
 import CustmeDrawer from './custom-drawer';
 
 //Stack will receive a MainStackParamList - Type
-const Stack = createNativeStackNavigator<MainStackParamList>();
+// const Stack = createNativeStackNavigator<MainStackParamList>();
+const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
   return (
