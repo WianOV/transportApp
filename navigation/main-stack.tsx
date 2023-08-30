@@ -10,8 +10,8 @@ import {MainStackParamList} from '../types/navigation';
 import CustmeDrawer from './custom-drawer';
 
 //Stack will receive a MainStackParamList - Type
-// const Stack = createNativeStackNavigator<MainStackParamList>();
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<MainStackParamList>();
+// const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
   return (
@@ -20,9 +20,9 @@ const MainStack = () => {
         headerShown: true,
       }}>
       {/* screens here */}
-      <Stack.Screen name="Home" component={Home} />
-      {/* <Stack.Screen name="Details" component={Details} />
-      <Stack.Screen name="Settings" component={Settings} /> */}
+      <Stack.Screen name="Drawer" component={CustmeDrawer} />
+      <Stack.Screen name="Details" component={Details} />
+      <Stack.Screen name="Settings" component={Settings} />
     </Stack.Navigator>
   );
 };

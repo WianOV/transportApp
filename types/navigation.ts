@@ -1,4 +1,4 @@
-// import type {RouteProp} from '@react-navigation/native';
+import type {RouteProp} from '@react-navigation/native';
 
 export type MainStackParamList = {
   Drawer: undefined;
@@ -7,4 +7,4 @@ export type MainStackParamList = {
   Settings: undefined;
 };
 
-// export type DetailsScreenRouteProp = RouteProp<MainStackParamList, 'Details'>;
+export type DetailsScreenRouteProp = RouteProp<MainStackParamList, 'Details'>;

@@ -21,10 +21,10 @@ function App(): JSX.Element {
   // };
 
   return (
-    <SafeAreaView>
+    <>
       <RootNavigator />
       {/* <Text>test</Text> */}
-    </SafeAreaView>
+    </>
   );
 }
 

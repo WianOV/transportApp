@@ -3,18 +3,16 @@ import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {MainStackParamList} from '../../types/navigation';
 
-console.log('test');
-const Home = () => {
+const Home = ({navigation}: NativeStackScreenProps<MainStackParamList>) => {
   return (
-    <View style={{backgroundColor: 'red', flex: 1}}>
+    <View>
       <Text>Home</Text>
-
-      {/* <Button
+      <Button
         title="Go to Details"
         onPress={() =>
           navigation.navigate('Details', {title: 'Quester Studios'})
         }
-      /> */}
+      />
     </View>
   );
 };
