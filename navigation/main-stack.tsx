@@ -8,6 +8,7 @@ import Details from '../src/screens/details';
 import Settings from '../src/screens/settings';
 import {MainStackParamList} from '../types/navigation';
 import CustmeDrawer from './custom-drawer';
+import DestinationSearch from '../src/screens/destinations-search/destination-search';
 
 //Stack will receive a MainStackParamList - Type
 const Stack = createNativeStackNavigator<MainStackParamList>();
@@ -24,6 +25,7 @@ const MainStack = () => {
       {/* <Stack.Screen name="Home" component={Home} /> */}
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="Settings" component={Settings} />
+      <Stack.Screen name="DestinationSearch" component={DestinationSearch} />
     </Stack.Navigator>
   );
 };
