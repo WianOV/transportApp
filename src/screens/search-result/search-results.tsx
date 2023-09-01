@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {View, Dimensions, Alert} from 'react-native';
 import {API, graphqlOperation, Auth} from 'aws-amplify';
-import RouteMap from '../../components/RouteMap';
-import UberTypes from '../../components/UberTypes';
+import RouteMap from '../../components/route-map/route-map.component';
+import UberTypes from '../../components/uber-types/uber-types';
 import {createOrder} from '../../graphql/mutations';
 
 import {useRoute, useNavigation} from '@react-navigation/native';

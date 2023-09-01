@@ -8,10 +8,10 @@ const HomeMap = () => {
       provider={PROVIDER_GOOGLE}
       showsUserLocation={true}
       initialRegion={{
-        latitude: -30.5595, // South Africa's latitude
-        longitude: 22.9375, // South Africa's longitude
-        latitudeDelta: 30, // Adjust this value to zoom level
-        longitudeDelta: 30, // Adjust this value to zoom level
+        latitude: -33.9249, // Cape Town's latitude
+        longitude: 18.4241, // Cape Town's longitude
+        latitudeDelta: 0.1, // Adjust this value to zoom level
+        longitudeDelta: 0.1, // Adjust this value to zoom level
       }}
     />
   );

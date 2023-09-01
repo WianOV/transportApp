@@ -5,7 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {MainStackParamList} from '../../types/navigation'; // Make sure to import the correct path
+import {MainStackParamList} from '../../../types/navigation'; // Make sure to import the correct path
 
 import styles from './home-search.style';
 
