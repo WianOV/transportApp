@@ -1,17 +1,19 @@
 import React, {useState} from 'react';
-import {View, Dimensions, Alert} from 'react-native';
+import {View, Dimensions, Alert, TouchableOpacity, Text} from 'react-native';
 import {API, graphqlOperation, Auth} from 'aws-amplify';
 import RouteMap from '../../components/route-map/route-map.component';
 import UberTypes from '../../components/uber-types/uber-types';
 import {createOrder} from '../../graphql/mutations';
 
 import {useRoute, useNavigation} from '@react-navigation/native';
+import styles from './search-result.style';
+import {MainStackParamList} from '../../../types/navigation';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const SearchResults = props => {
   const typeState = useState(null);
 
   const route = useRoute();
-  const navigation = useNavigation();
 
   const {originPlace, destinationPlace} = route.params;
   console.log(originPlace.location);
@@ -54,9 +56,23 @@ const SearchResults = props => {
   //   }
   // };
 
+  const navigation =
+    useNavigation<StackNavigationProp<MainStackParamList, 'NavApp'>>();
+
+  const goBack = () => {
+    navigation.navigate('DestinationSearch');
+  };
+
   return (
     <View style={{display: 'flex', justifyContent: 'space-between'}}>
-      <View style={{height: Dimensions.get('window').height - 200}}>
+      <TouchableOpacity style={styles.backButton} onPress={goBack}>
+        <Text>Back</Text>
+      </TouchableOpacity>
+      <View
+        style={{
+          height: Dimensions.get('window').height - 200,
+          position: 'relative',
+        }}>
         <RouteMap origin={originPlace} destination={destinationPlace} />
       </View>
 

@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     height: '100%',
+    marginTop: 10,
   },
   textInput: {
     padding: 10,
@@ -64,6 +65,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 80,
     left: 15,
+  },
+  backButton: {
+    width: 20,
+    height: 50,
+    backgroundColor: 'black',
+    marginTop: 10,
   },
 });
 

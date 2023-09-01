@@ -19,10 +19,10 @@ const MainStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false,
       }}>
       {/* screens here */}
-      <Stack.Screen name="NavApp" component={CustmeDrawer} />
+      <Stack.Screen name="NavApp" component={CustmeDrawer}  />
       <Stack.Screen name="SearchResults" component={SearchResults} />
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="Settings" component={Settings} />

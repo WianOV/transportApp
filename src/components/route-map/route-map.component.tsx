@@ -22,9 +22,9 @@ const RouteMap = ({origin, destination}) => {
       showsUserLocation={true}
       initialRegion={{
         latitude: origin.details.geometry.location.lat,
-        longitude: origin.details.geometry.location.lng, // Cape Town's longitude
-        latitudeDelta: 0.1, // Adjust this value to zoom level
-        longitudeDelta: 0.1, // Adjust this value to zoom level
+        longitude: origin.details.geometry.location.lng,
+        latitudeDelta: 0.1,
+        longitudeDelta: 0.1,
       }}>
       <MapViewDirections
         origin={originLoc}

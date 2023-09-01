@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View, TextInput, SafeAreaView, Button} from 'react-native';
+import {
+  View,
+  TextInput,
+  SafeAreaView,
+  Button,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import {useNavigation} from '@react-navigation/native';
 import styles from './destination.style';
@@ -31,6 +38,9 @@ const DestinationSearch = props => {
       });
     }
   };
+  const goBack = () => {
+    navigation.navigate('Home');
+  };
 
   useEffect(() => {
     goToSearchResults();
@@ -38,6 +48,9 @@ const DestinationSearch = props => {
 
   return (
     <SafeAreaView>
+      <TouchableOpacity style={styles.backButton} onPress={goBack}>
+        <Text>Back</Text>
+      </TouchableOpacity>
       <View style={styles.container}>
         <GooglePlacesAutocomplete
           placeholder="Where from?"
