@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {View, TextInput, SafeAreaView} from 'react-native';
+import {View, TextInput, SafeAreaView, Button} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import {useNavigation} from '@react-navigation/native';
-
 import styles from './destination.style';
 import PlaceRow from './place-row';
+import {MainStackParamList} from '../../../types/navigation';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const homePlace = {
   description: 'Home',
@@ -16,12 +17,13 @@ const workPlace = {
 };
 
 const DestinationSearch = props => {
-  const [originPlace, setOriginPlace] = useState(null);
-  const [destinationPlace, setDestinationPlace] = useState(null);
+  const [originPlace, setOriginPlace] = useState<any>(null);
+  const [destinationPlace, setDestinationPlace] = useState<any>(null);
 
-  const navigation = useNavigation();
+  const navigation =
+    useNavigation<StackNavigationProp<MainStackParamList, 'NavApp'>>();
 
-  const checkNavigation = () => {
+  const goToSearchResults = () => {
     if (originPlace && destinationPlace) {
       navigation.navigate('SearchResults', {
         originPlace,
@@ -31,7 +33,7 @@ const DestinationSearch = props => {
   };
 
   useEffect(() => {
-    checkNavigation();
+    goToSearchResults();
   }, [originPlace, destinationPlace]);
 
   return (
@@ -79,7 +81,7 @@ const DestinationSearch = props => {
           }}
           fetchDetails
           query={{
-            key: '',
+            key: 'AIzaSyDbuM9_zziQT77Sx8MzJiPm-ytZD-AibHg',
             language: 'en',
           }}
           renderRow={data => <PlaceRow data={data} />}

@@ -4,8 +4,10 @@ import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 // import {API, graphqlOperation} from 'aws-amplify';
 // import {listCars} from '../../graphql/queries';
 
+import cars from '../assets/data/cars';
+
 const HomeMap = () => {
-  const [cars, setCars] = useState([]);
+  // const [cars, setCars] = useState([]);
 
   // useEffect(() => {
   //   const fetchCars = async () => {
@@ -30,6 +32,7 @@ const HomeMap = () => {
     }
     return require('/Users/wianvanschalkwyk/Documents/GitHub/wian react native/transportApp/src/assets/images/top-UberXL.png');
   };
+
   return (
     <MapView
       style={{width: '100%', height: '50%'}}

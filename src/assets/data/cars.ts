@@ -2,29 +2,29 @@ export default [
   {
     id: '0',
     type: 'UberX',
-    latitude: 28.450627,
-    longitude: -16.263045,
+    latitude: -33.9249, // Cape Town's latitude
+    longitude: 19.4241,
     heading: 47,
   },
   {
     id: '1',
     type: 'Comfort',
-    latitude: 28.456312,
-    longitude: -16.252929,
+    latitude: -31.9249, // Cape Town's latitude
+    longitude: 18.4241,
     heading: 190,
   },
   {
     id: '2',
     type: 'UberXL',
-    latitude: 28.456208,
-    longitude: -16.259098,
+    latitude: -32.9249, // Cape Town's latitude
+    longitude: 18.4241,
     heading: 99,
   },
   {
     id: '3',
     type: 'Comfort',
-    latitude: 28.454812,
-    longitude:-16.258658,
+    latitude: -33.9249, // Cape Town's latitude
+    longitude: 17.4241,
     heading: 120,
   },
 ];

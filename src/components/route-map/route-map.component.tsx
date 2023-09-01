@@ -21,20 +21,21 @@ const RouteMap = ({origin, destination}) => {
       provider={PROVIDER_GOOGLE}
       showsUserLocation={true}
       initialRegion={{
-        latitude: 28.450627,
-        longitude: -16.263045,
-        latitudeDelta: 0.0222,
-        longitudeDelta: 0.0121,
+        latitude: -33.9249, // Cape Town's latitude
+        longitude: 18.4241, // Cape Town's longitude
+        latitudeDelta: 0.1, // Adjust this value to zoom level
+        longitudeDelta: 0.1, // Adjust this value to zoom level
       }}>
       <MapViewDirections
         origin={originLoc}
         destination={destinationLoc}
         apikey={GOOGLE_MAPS_APIKEY}
-        strokeWidth={5}
+        strokeWidth={3}
         strokeColor="black"
+        onError={error => console.log('MapViewDirections Error:', error)}
       />
-      <Marker coordinate={origin} title={'Origin'} />
-      <Marker coordinate={destination} title={'Destination'} />
+      <Marker coordinate={originLoc} title={'Origin'} />
+      <Marker coordinate={destinationLoc} title={'Destination'} />
     </MapView>
   );
 };
