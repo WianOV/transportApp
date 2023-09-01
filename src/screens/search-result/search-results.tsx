@@ -14,7 +14,7 @@ const SearchResults = props => {
   const navigation = useNavigation();
 
   const {originPlace, destinationPlace} = route.params;
-
+  console.log(originPlace.location);
   // const onSubmit = async () => {
   //   const [type] = typeState;
   //   if (!type) {
@@ -56,7 +56,7 @@ const SearchResults = props => {
 
   return (
     <View style={{display: 'flex', justifyContent: 'space-between'}}>
-      <View style={{height: Dimensions.get('window').height - 400}}>
+      <View style={{height: Dimensions.get('window').height - 200}}>
         <RouteMap origin={originPlace} destination={destinationPlace} />
       </View>
 

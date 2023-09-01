@@ -21,8 +21,8 @@ const RouteMap = ({origin, destination}) => {
       provider={PROVIDER_GOOGLE}
       showsUserLocation={true}
       initialRegion={{
-        latitude: -33.9249, // Cape Town's latitude
-        longitude: 18.4241, // Cape Town's longitude
+        latitude: origin.details.geometry.location.lat,
+        longitude: origin.details.geometry.location.lng, // Cape Town's longitude
         latitudeDelta: 0.1, // Adjust this value to zoom level
         longitudeDelta: 0.1, // Adjust this value to zoom level
       }}>
